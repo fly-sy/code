@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <title>fly</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style type="text/css">
+            .navbar-nav li a {
+                padding:30px 20px;
+                font-weight: 600;
+                font-size:20px;
+                color: #fff;
+            }
+            .navbar-brand {
+                height: 30px;
+                padding-top: 20px;
+            }
+            .navbar {
+                min-height: 83px;
+            }
+            .navbar-toggle {
+                margin:30px 20px 4px;
+            }
+            #tabs {
+                margin-top: 113px;
+            }
+            #tabs hgroup {
+                width: 400px;
+            }
+            #tabs h2 {
+                float: left;
+                margin-left: 4px;
+                line-height: .1;
+                margin-bottom: 36px;
+                font-size: 18px;
+            }
+            #tabs .nav {
+                margin-left: 40px;
+                float: left;
+                font-size: 12px;
+            }
+            #tabs .nav-pills {
+            }
+            #tabs li {
+                margin-right: 20px;
+            }
+            #tabs a {
+                display: block;
+                color: #000 !important;;
+            }
+            #tabs a:hover {
+                text-decoration: none;
+            }
+            #tabs .thumbnail img {
+                display: block;
+                width: 100%;
+            }
+            #tabs .thumbnail {
+                border-color: transparent;
+            }
+            #tabs span {
+                font-size: 12px;
+            }
+            /*没有小于768px，是因为Bootstrap3以移动端优先设计*/
+
+            /* 小屏幕（平板，大于等于768px） */
+            @media (min-width: 768px) {
+               #tabs h2 {
+                    font-size: 22px;
+                }
+                #tabs .nav {
+                    font-size: 14px;
+                }
+            }
+
+            /* 中等屏幕（桌面显示器，大于等于992px） */
+            @media (min-width: 992px) {
+               #tabs h2 {
+                    font-size: 26px;
+                }
+                #tabs .nav {
+                    font-size: 14px;
+                }
+            }
+
+            /* 大屏幕（大桌面显示器，大于等于1200px） */
+            @media (min-width: 1200px) {
+               #tabs h2 {
+                    font-size: 30px;
+                }
+                #tabs .nav {
+                    font-size: 14px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- start navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <h1 class="hide">WEB前端</h1>
+                    <a href="#" class="navbar-brand"><img src="img/logo.png" alt="WEB前端"></a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#tab-html" data-toggle="tab">
+                                <span class="glyphicon glyphicon-header">TML</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tab-css" data-toggle="tab">
+                                <span class="glyphicon glyphicon-euro">SS</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tab-jq" data-toggle="tab">
+                                <span class="glyphicon glyphicon-certificate">Jquery</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tab-js" data-toggle="tab">
+                                <span class="glyphicon glyphicon-fire">JavaScript</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tab-demo" data-toggle="tab">
+                                <span class="glyphicon glyphicon-globe">Demo</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- end navbar -->
+        <!-- start tabs -->
+        <div id="tabs">
+            <div class="container">
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="tab-html">
+                        <hgroup>
+                            <h2 class="">HTML</h2>
+                            <ul id="myTab" class="nav nav-pills">
+                                <li class="active">
+                                    <a href="#html" data-toggle="tab">
+                                       HTML
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#html5" data-toggle="tab">HTML5</a>
+                                </li>
+                            </ul>
+                        </hgroup>
+                        <div class="clearfix"></div>
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="html">
+                                <div class="row text-center">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                        <div class="thumbnail">
+                                           <a href="https://fly-sy.github.io/snake/" target="_black">
+                                                <img src="" x-src="img/1.jpg" alt="">
+                                            </a>
+                                            <div class="caption">
+                                               <span class="txt">
+                                                    HTML
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                        <div class="thumbnail">
+                                           <a href="https://fly-sy.github.io/snake/" target="_black">
+                                                <img src="" x-src="img/1.jpg" alt="">
+                                            </a>
+                                            <div class="caption">
+                                               <span class="txt">
+                                                    HTML
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                        <div class="thumbnail">
+                                           <a href="https://fly-sy.github.io/snake/" target="_black">
+                                                <img src="" x-src="img/1.jpg" alt="">
+                                            </a>
+                                            <div class="caption">
+                                               <span class="txt">
+                                                    HTML
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                        <div class="thumbnail">
+                                           <a href="https://fly-sy.github.io/snake/" target="_black">
+                                                <img src="" x-src="img/1.jpg" alt="">
+                                            </a>
+                                            <div class="caption">
+                                               <span class="txt">
+                                                    HTML
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                        <div class="thumbnail">
+                                           <a href="https://fly-sy.github.io/snake/" target="_black">
+                                                <img src="" x-src="img/1.jpg" alt="">
+                                            </a>
+                                            <div class="caption">
+                                               <span class="txt">
+                                                    HTML
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                        <div class="thumbnail">
+                                           <a href="https://fly-sy.github.io/snake/" target="_black">
+                                                <img src="" x-src="img/1.jpg" alt="">
+                                            </a>
+                                            <div class="caption">
+                                               <span class="txt">
+                                                    HTML
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade in" id="html5">
+                                <div class="row text-center">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                        <div class="thumbnail">
+                                           <a href="https://fly-sy.github.io/snake/" target="_black">
+                                                <img src="" x-src="img/1.jpg" alt="">
+                                            </a>
+                                            <div class="caption">
+                                               <span class="txt">
+                                                    HTML
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                        <div class="thumbnail">
+                                           <a href="https://fly-sy.github.io/snake/" target="_black">
+                                                <img src="" x-src="img/1.jpg" alt="">
+                                            </a>
+                                            <div class="caption">
+                                               <span class="txt">
+                                                    HTML
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                        <div class="thumbnail">
+                                           <a href="https://fly-sy.github.io/snake/" target="_black">
+                                                <img src="" x-src="img/1.jpg" alt="">
+                                            </a>
+                                            <div class="caption">
+                                               <span class="txt">
+                                                    HTML
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                        <div class="thumbnail">
+                                           <a href="https://fly-sy.github.io/snake/" target="_black">
+                                                <img src="" x-src="img/1.jpg" alt="">
+                                            </a>
+                                            <div class="caption">
+                                               <span class="txt">
+                                                    HTML
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                        <div class="thumbnail">
+                                           <a href="https://fly-sy.github.io/snake/" target="_black">
+                                                <img src="" x-src="img/1.jpg" alt="">
+                                            </a>
+                                            <div class="caption">
+                                               <span class="txt">
+                                                    HTML
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                        <div class="thumbnail">
+                                           <a href="https://fly-sy.github.io/snake/" target="_black">
+                                                <img src="" x-src="img/1.jpg" alt="">
+                                            </a>
+                                            <div class="caption">
+                                               <span class="txt">
+                                                    HTML
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade in" id="tab-css">
+                        <hgroup>
+                            <h2 class="">CSS</h2>
+                            <ul id="myTab" class="nav nav-pills">
+                                <li class="active">
+                                    <a href="#css" data-toggle="tab">
+                                       CSS
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#css3" data-toggle="tab">CSS3</a>
+                                </li>
+                            </ul>
+                        </hgroup>
+                        <div class="clearfix"></div>
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="css">
+                                <div class="row text-center">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                        <div class="thumbnail">
+                                           <a href="https://fly-sy.github.io/snake/" target="_black">
+                                                <img src="" x-src="img/1.jpg" alt="">
+                                            </a>
+                                            <div class="caption">
+                                               <span class="txt">
+                                                    HTML
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                        <div class="thumbnail">
+                                           <a href="https://fly-sy.github.io/snake/" target="_black">
+                                                <img src="" x-src="img/1.jpg" alt="">
+                                            </a>
+                                            <div class="caption">
+                                               <span class="txt">
+                                                    HTML
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                        <div class="thumbnail">
+                                           <a href="https://fly-sy.github.io/snake/" target="_black">
+                                                <img src="" x-src="img/1.jpg" alt="">
+                                            </a>
+                                            <div class="caption">
+                                               <span class="txt">
+                                                    HTML
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                        <div class="thumbnail">
+                                           <a href="https://fly-sy.github.io/snake/" target="_black">
+                                                <img src="" x-src="img/1.jpg" alt="">
+                                            </a>
+                                            <div class="caption">
+                                               <span class="txt">
+                                                    HTML
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                        <div class="thumbnail">
+                                           <a href="https://fly-sy.github.io/snake/" target="_black">
+                                                <img src="" x-src="img/1.jpg" alt="">
+                                            </a>
+                                            <div class="caption">
+                                               <span class="txt">
+                                                    HTML
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                        <div class="thumbnail">
+                                           <a href="https://fly-sy.github.io/snake/" target="_black">
+                                                <img src="" x-src="img/1.jpg" alt="">
+                                            </a>
+                                            <div class="caption">
+                                               <span class="txt">
+                                                    HTML
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade in" id="css3">
+                                <div class="row text-center">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                        <div class="thumbnail">
+                                           <a href="https://fly-sy.github.io/snake/" target="_black">
+                                                <img src="" x-src="img/1.jpg" alt="">
+                                            </a>
+                                            <div class="caption">
+                                               <span class="txt">
+                                                    HTML
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                        <div class="thumbnail">
+                                           <a href="https://fly-sy.github.io/snake/" target="_black">
+                                                <img src="" x-src="img/1.jpg" alt="">
+                                            </a>
+                                            <div class="caption">
+                                               <span class="txt">
+                                                    HTML
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                        <div class="thumbnail">
+                                           <a href="https://fly-sy.github.io/snake/" target="_black">
+                                                <img src="" x-src="img/1.jpg" alt="">
+                                            </a>
+                                            <div class="caption">
+                                               <span class="txt">
+                                                    HTML
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                        <div class="thumbnail">
+                                           <a href="https://fly-sy.github.io/snake/" target="_black">
+                                                <img src="" x-src="img/1.jpg" alt="">
+                                            </a>
+                                            <div class="caption">
+                                               <span class="txt">
+                                                    HTML
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                        <div class="thumbnail">
+                                           <a href="https://fly-sy.github.io/snake/" target="_black">
+                                                <img src="" x-src="img/1.jpg" alt="">
+                                            </a>
+                                            <div class="caption">
+                                               <span class="txt">
+                                                    HTML
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                        <div class="thumbnail">
+                                           <a href="https://fly-sy.github.io/snake/" target="_black">
+                                                <img src="" x-src="img/1.jpg" alt="">
+                                            </a>
+                                            <div class="caption">
+                                               <span class="txt">
+                                                    HTML
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade in" id="tab-jq">
+                        <h2 class="">Jquery</h2>
+                        <div class="clearfix"></div>
+                        <div class="row text-center">
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                <div class="thumbnail">
+                                   <a href="https://fly-sy.github.io/snake/" target="_black">
+                                        <img src="" x-src="img/1.jpg" alt="">
+                                    </a>
+                                    <div class="caption">
+                                       <span class="txt">
+                                            HTML
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                <div class="thumbnail">
+                                   <a href="https://fly-sy.github.io/snake/" target="_black">
+                                        <img src="" x-src="img/1.jpg" alt="">
+                                    </a>
+                                    <div class="caption">
+                                       <span class="txt">
+                                            HTML
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                <div class="thumbnail">
+                                   <a href="https://fly-sy.github.io/snake/" target="_black">
+                                        <img src="" x-src="img/1.jpg" alt="">
+                                    </a>
+                                    <div class="caption">
+                                       <span class="txt">
+                                            HTML
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                <div class="thumbnail">
+                                   <a href="https://fly-sy.github.io/snake/" target="_black">
+                                        <img src="" x-src="img/1.jpg" alt="">
+                                    </a>
+                                    <div class="caption">
+                                       <span class="txt">
+                                            HTML
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                <div class="thumbnail">
+                                   <a href="https://fly-sy.github.io/snake/" target="_black">
+                                        <img src="" x-src="img/1.jpg" alt="">
+                                    </a>
+                                    <div class="caption">
+                                       <span class="txt">
+                                            HTML
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                <div class="thumbnail">
+                                   <a href="https://fly-sy.github.io/snake/" target="_black">
+                                        <img src="" x-src="img/1.jpg" alt="">
+                                    </a>
+                                    <div class="caption">
+                                       <span class="txt">
+                                            HTML
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade in" id="tab-js">
+                        <h2 class="">JavaScript</h2>
+                        <div class="clearfix"></div>
+                        <div class="row text-center">
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                <div class="thumbnail">
+                                   <a href="https://fly-sy.github.io/snake/" target="_black">
+                                        <img src="" x-src="img/1.jpg" alt="">
+                                    </a>
+                                    <div class="caption">
+                                       <span class="txt">
+                                            HTML
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                <div class="thumbnail">
+                                   <a href="https://fly-sy.github.io/snake/" target="_black">
+                                        <img src="" x-src="img/1.jpg" alt="">
+                                    </a>
+                                    <div class="caption">
+                                       <span class="txt">
+                                            HTML
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                <div class="thumbnail">
+                                   <a href="https://fly-sy.github.io/snake/" target="_black">
+                                        <img src="" x-src="img/1.jpg" alt="">
+                                    </a>
+                                    <div class="caption">
+                                       <span class="txt">
+                                            HTML
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                <div class="thumbnail">
+                                   <a href="https://fly-sy.github.io/snake/" target="_black">
+                                        <img src="" x-src="img/1.jpg" alt="">
+                                    </a>
+                                    <div class="caption">
+                                       <span class="txt">
+                                            HTML
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                <div class="thumbnail">
+                                   <a href="https://fly-sy.github.io/snake/" target="_black">
+                                        <img src="" x-src="img/1.jpg" alt="">
+                                    </a>
+                                    <div class="caption">
+                                       <span class="txt">
+                                            HTML
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                <div class="thumbnail">
+                                   <a href="https://fly-sy.github.io/snake/" target="_black">
+                                        <img src="" x-src="img/1.jpg" alt="">
+                                    </a>
+                                    <div class="caption">
+                                       <span class="txt">
+                                            HTML
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade in" id="tab-demo">
+                        <h2 class="">Demo</h2>
+                        <div class="clearfix"></div>
+                        <div class="row text-center">
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                <div class="thumbnail">
+                                   <a href="https://fly-sy.github.io/snake/" target="_black">
+                                        <img src="" x-src="img/1.jpg" alt="">
+                                    </a>
+                                    <div class="caption">
+                                       <span class="txt">
+                                            HTML
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                <div class="thumbnail">
+                                   <a href="https://fly-sy.github.io/snake/" target="_black">
+                                        <img src="" x-src="img/1.jpg" alt="">
+                                    </a>
+                                    <div class="caption">
+                                       <span class="txt">
+                                            HTML
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                <div class="thumbnail">
+                                   <a href="https://fly-sy.github.io/snake/" target="_black">
+                                        <img src="" x-src="img/1.jpg" alt="">
+                                    </a>
+                                    <div class="caption">
+                                       <span class="txt">
+                                            HTML
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                <div class="thumbnail">
+                                   <a href="https://fly-sy.github.io/snake/" target="_black">
+                                        <img src="" x-src="img/1.jpg" alt="">
+                                    </a>
+                                    <div class="caption">
+                                       <span class="txt">
+                                            HTML
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                <div class="thumbnail">
+                                   <a href="https://fly-sy.github.io/snake/" target="_black">
+                                        <img src="" x-src="img/1.jpg" alt="">
+                                    </a>
+                                    <div class="caption">
+                                       <span class="txt">
+                                            HTML
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                <div class="thumbnail">
+                                   <a href="https://fly-sy.github.io/snake/" target="_black">
+                                        <img src="" x-src="img/1.jpg" alt="">
+                                    </a>
+                                    <div class="caption">
+                                       <span class="txt">
+                                            HTML
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end tabs -->
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                $(".thumbnail img").each(function(){
+                    if($(this).offset().top + $(this).width()/2 < $(window).height()+$(window).scrollTop()){
+                       $(this).attr("src",$(this).attr("x-src"));
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
