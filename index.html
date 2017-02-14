@@ -43,6 +43,7 @@
         .wrap{
             margin:0 auto;
             position:relative;
+            display: none;
         }
         .wrap .box{
             width:280px;
@@ -79,17 +80,21 @@
             font-size:18px;
             font-weight:bold;
         }
-        #loader{
-            width:100%;
-            height:60px;
-            background:url("load.gif") no-repeat center #fff;
-            position:fixed;
-            bottom:0;
-            left:0
+        .loading{
+            width: 58px;
+            height: 10px;
+            background: url(images/load.gif);
+            position:absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
         }
     </style>
 </head>
 <body>
+    <div class="loading" id="loading"></div>
     <section class="title">
         <h2>项目展示</h2>By fly
     </section>
@@ -99,7 +104,7 @@
     <script type="text/javascript">
 
         window.onload = function(){
-            show();
+            setTimeout(show,2000);
         }
         // 模拟后台数据
         var data = [
@@ -205,6 +210,9 @@
          */
         function show(){
             wrap = document.getElementById('wrap');
+            var loading = document.getElementById('loading');
+            loading.style.display = 'none';
+            wrap.style.display = 'block';
             //  1. 获取每一个box元素
             var boxs  = getClass(wrap,"box");
             //  2.获得屏幕可显示的列数
@@ -218,12 +226,12 @@
             //  3.循环出所有的box并按照瀑布流排列
             for (var i = 0; i < boxs.length; i++) {
                 if(i<colsNum){
-                    everyH[i] = boxs[i].offsetHeight;
+                    everyH[i] = boxs[i].offsetHeight - 18;
                 }else{
                     var minH = Math.min.apply(null,everyH);//获得最小的列的高度
                     var minIndex = getIndex(minH,everyH); //获得最小列的索引
                     getStyle(boxs[i],minH,boxs[minIndex].offsetLeft,i);
-                    everyH[minIndex] += boxs[i].offsetHeight;//更新最小列的高度
+                    everyH[minIndex] += boxs[i].offsetHeight - 20;//更新最小列的高度
                 }
             }
         }
