@@ -97,6 +97,7 @@
     <!-- <div id="loader"></div> -->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript">
+
         window.onload = function(){
             show();
         }
@@ -105,77 +106,77 @@
             {
                 'src':'1.jpg',
                 'title':'仿百度音乐播放器',
-                'href':'https://fly-sy.github.io/music/index.html'
+                'href':'music/index.html'
             },
             {
                 'src':'2.jpg',
                 'title':'js音乐播放器-歌词联动',
-                'href':'https://fly-sy.github.io/music2/index.html'
+                'href':'music2/index.html'
             },
             {
                 'src':'3.jpg',
                 'title':'仿天猫商城PC端',
-                'href':'https://fly-sy.github.io/tianmao/index.html'
+                'href':'tianmao/index.html'
             },
             {
                 'src':'4.jpg',
                 'title':'Bootstarp潭州企训网',
-                'href':'https://fly-sy.github.io/firm/index.html'
+                'href':'firm/index.html'
             },
             {
                 'src':'5.jpg',
                 'title':'JavaScriptp+Canvas 贪吃蛇游戏',
-                'href':'https://fly-sy.github.io/game-snake/index.html'
+                'href':'game-snake/index.html'
             },
             {
                 'src':'6.jpg',
                 'title':'响应式潭州旅行社',
-                'href':'https://fly-sy.github.io/tour/index.html'
+                'href':'tour/index.html'
             },
             {
                 'src':'7.jpg',
                 'title':'潭州营销官网',
-                'href':'https://fly-sy.github.io/soft/index.html'
+                'href':'soft/index.html'
             },
             {
                 'src':'8.jpg',
                 'title':'动物园主题网站',
-                'href':'https://fly-sy.github.io/animal/index.html'
+                'href':'animal/index.html'
             },
             {
                 'src':'9.jpg',
                 'title':'仿小米官方首页',
-                'href':'https://fly-sy.github.io/xiaomi/index.html'
+                'href':'xiaomi/index.html'
             },
             {
                 'src':'11.jpg',
                 'title':'骇客帝国矩阵效果',
-                'href':'https://fly-sy.github.io/hacker/index.html'
+                'href':'hacker/index.html'
             },
             {
                 'src':'12.jpg',
                 'title':'Canvas 圣诞节',
-                'href':'https://fly-sy.github.io/snow/index.html'
+                'href':'snow/index.html'
             },
             {
                 'src':'13.jpg',
                 'title':'纯JS面向对象编程音乐播放器',
-                'href':'https://fly-sy.github.io/objAudio/index.html'
+                'href':'objAudio/index.html'
             },
             {
                 'src':'14.jpg',
                 'title':'CSS3小黄人',
-                'href':'https://fly-sy.github.io/css3/index.html'
+                'href':'css3/index.html'
             },
             {
                 'src':'15.jpg',
                 'title':'css3关键帧动画',
-                'href':'https://fly-sy.github.io/love/index.html'
+                'href':'love/index.html'
             },
             {
                 'src':'16.jpg',
                 'title':'Canvas + Css3 圣诞节',
-                'href':'https://fly-sy.github.io/Christmas/index.html'
+                'href':'Christmas/index.html'
             },
             {
                 'src':'17.jpg',
@@ -260,8 +261,8 @@
 
                 //创建img
                 var img = document.createElement('img');
-                img.src = 'images/'+data[i].src;
-                img.style.height = 'auto';
+                // img.src = 'code/images/'+data[i].src;
+                img.setAttribute("data-url",data[i].src);
                 a.appendChild(img);
 
 
@@ -316,6 +317,90 @@
             },999);
             getStartNum = index;//更新请求数据的条数位置
         }
+
+
+        /**
+         * [延迟加载插件]
+         * @return {[type]} [description]
+         */
+        (function(){
+            /**
+             * [tagName 封装获取css类]
+             * @param  {[type]} tagName [指定的css类]
+             * @return {[type]}         [description]
+             */
+            function tagName(tagName){
+                return document.getElementsByTagName(tagName);
+            }
+            /**
+             * [$ 封装获取ID]
+             * @param  {[type]} id [值得的ID]
+             * @return {[type]}    [description]
+             */
+            function $(id){
+                return document.getElementById(id);
+            }
+            /**
+             * [跨浏览器兼容addEventListener]
+             * @param {[type]} obj  [监听元素]
+             * @param {[type]} type [事件类型]
+             * @param {[type]} func [回调函数]
+             */
+            function addEvent(obj,type,func){
+                if(obj.addEventListener){
+                    obj.addEventListener(type,func,false);
+                }else if(obj.attachEvent){
+                    obj.attachEvent('on'+type,func);
+                }
+            }
+            //这里可以按照需要配置些参数
+            var v={
+                eleGroup:null,
+                eleTop:null,
+                eleHeight:null,
+                screenHeight:null,
+                visibleHeight:null,
+                scrollHeight:null,
+                scrolloverHeight:null,
+                limitHeight:null
+            }
+            /**
+             * [对数据进行初始化]
+             * @param  {[type]} element [description]
+             * @return {[type]}         [description]
+             */
+            function init(element){
+                // 获取DOM
+                v.eleGroup = tagName(element)
+                screenHeight=document.documentElement.clientHeight;
+                scrolloverHeight=document.body.scrollTop;
+                for(var i=0,j=v.eleGroup.length;i<j;i++){
+                    if(v.eleGroup[i].offsetTop<=screenHeight && v.eleGroup[i].getAttribute('data-url')){
+                        v.eleGroup[i].setAttribute('src','images/'+v.eleGroup[i].getAttribute('data-url'));
+                        v.eleGroup[i].removeAttribute('data-url')
+                    }
+                }
+            }
+            /**
+             * [lazyLoad 通过获取的data-url 修改图片的 src]
+             * @return {[type]} [description]
+             */
+            function lazyLoad(){
+                if(document.body.scrollTop == 0){
+                    limitHeight=document.documentElement.scrollTop+document.documentElement.clientHeight;
+                }else{
+                    limitHeight=document.body.scrollTop+document.documentElement.clientHeight;
+                }
+                for(var i=0,j=v.eleGroup.length;i<j;i++){
+                    if(v.eleGroup[i].offsetTop<=limitHeight && v.eleGroup[i].getAttribute('data-url')){
+                        v.eleGroup[i].src=v.eleGroup[i].getAttribute('data-url');
+                        v.eleGroup[i].removeAttribute('data-url')
+                    }
+                }
+            }
+            init('img')
+            addEvent(window,'scroll',lazyLoad);
+        })()
     </script>
 </body>
 </html>
